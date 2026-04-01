@@ -1,4 +1,4 @@
-import random
+# import random
 
 # print("hello world")
 
@@ -88,15 +88,15 @@ import random
 
 # string
 
-greeting = "hello world"
+# greeting = "hello world"
 
-print(len(greeting))
+# print(len(greeting))
 # print(greeting[8])
 # print(greeting[-3])
 # for char in greeting:
 #     print(char + "xx")
 
-print("salut" not in greeting)
+# print("salut" not in greeting)
 
 # print(greeting[0:4])
 # print(greeting[3:])
@@ -114,17 +114,34 @@ print("salut" not in greeting)
 # print("HELLO".lower())
 # print("Hello".replace("l", "m"))
 
-greeting = "hello"
-greeting = greeting.replace("l", "m")
+# greeting = "hello"
+# greeting = greeting.replace("l", "m")
 
-print(greeting)
+# print(greeting)
 # print(new_greeting)
 
 
-first_name = "Karl"
+# first_name = "Karl"
 
-age = 50
+# age = 50
 
-print("Hello " + first_name + "I am " + age + "years old")
+# print("Hello " + first_name + "I am " + age + "years old")
 
-print(f"Hello, I am {first_name} I am {age} years old.")
+
+# print(f"Hello, I am {first_name} I am {age} years old.")
+
+
+if "hello":
+    print("1")
+else:
+    print("2")
+
+
+x = 5
+
+# x = x + 5
+x += 5
+
+
+if not "":
+    print("hello")
