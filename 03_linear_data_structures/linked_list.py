@@ -72,20 +72,56 @@ class LinkedList:
         self.length -= 1
         return excise.value
 
+    def reverse(self):
+        prev = None
+        current = self.head
+        self.tail = current
+
+        while current:
+            next_node = current.next
+            current.next = prev
+            prev = current
+            current = next_node
+
+        self.head = prev
+
 
 my_linked_list = LinkedList()
 
 
-my_linked_list.push("A")
-my_linked_list.push("B")
-my_linked_list.push("C")
-my_linked_list.push("D")
+my_linked_list.push("a")
+my_linked_list.push("b")
+my_linked_list.push("c")
+my_linked_list.push("d")
+my_linked_list.push("e")
 
-my_linked_list.insertAt(2, "K")
-my_linked_list.insertAt(0, "AA")
-my_linked_list.insertAt(6, "ZZ")
-my_linked_list.delete(3)
-my_linked_list.delete(0)
-my_linked_list.delete(4)
+# my_linked_list.insertAt(2, "K")
+# my_linked_list.insertAt(0, "AA")
+# my_linked_list.insertAt(6, "ZZ")
+# my_linked_list.delete(3)
+# my_linked_list.delete(0)
+# my_linked_list.delete(4)
 
 my_linked_list.printList()
+
+my_linked_list.reverse()
+print("reversed")
+my_linked_list.printList()
+
+
+def reverse_linkedlist(list):
+    start = list.head
+    list.head, list.tail = list.tail, list.head
+    reverse_pointer(start)
+
+
+def reverse_pointer(node):
+    if node.next == None:
+        return
+    reverse_pointer(node.next)
+    node.next.next = node
+    node.next = None
+
+
+# reverse_linkedlist(my_linked_list)
+# my_linked_list.printList()
